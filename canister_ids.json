@@ -1,0 +1,11 @@
+{
+  "motoko": {
+    "ic": "*"
+  },
+  "azle_hello_world": {
+    "ic": "*"
+  },
+  "angular": {
+    "ic": "*"
+  }
+}

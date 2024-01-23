@@ -1,27 +1,42 @@
-# Angular2
+# Angular Motoko and Azle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Welcome to the Angular Motoko and Azle Github repo! 
+This repository is made to be a plug-and-play solution for using Angular16 as an ICP smart contract canister front-end with Motoko as the canister back-end. <br />
+This project uses Angular version 17.1 and dfx 0.15.3.
+
+## Quickstart
+run git clone 'https://github.com/JupiterM/Angular16Motoko'. <br />
+cd angular-2. <br />
+run 'npm install -y'. <br />
+run 'npm run deploy:local'. 
+
+## Deploy on IC Network
+Just change values in 'canister_ids.json' to your own. <br />
+run 'npm run deploy:ic'
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular is meant to be run as a front-end canister, so 'ng serve' is not preferred. <br />
+Use 'npm run deploy:local' instead.
 
 ## Code scaffolding
+Components and services can be created the same. <br />
+When creating a new component or service: <br />
+{ MotokoService } must be imported and instantiated prior to being used. <br />
+After updating Motoko smart contract 'main.mo' <br />
+run "npm run generate:motoko" to generate new candid files <br />
+The motoko services file 'motoko.service.ts' must also be updated.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Building Angular Application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Instead of using `ng build` to build the project, <br />
+use either: <br />
+'npm run build:dev' for a development build or <br />
+'npm run build:prod' for a production build
 
-## Running unit tests
+## Running unit and end-to-end tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No additional testing has been created yet. There is only a ZoneAwarePromise which returns the value from a 'greet' function in the console to verify connectivity.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Further Help
+Check out the Dfinity forums for further help...if you dare!! 

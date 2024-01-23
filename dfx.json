@@ -1,0 +1,23 @@
+{
+  "canisters": {
+    "motoko": {
+      "main": "backend/motoko/main.mo",
+      "type": "motoko"
+    },
+    "azle_hello_world": {
+      "type": "custom",
+      "main": "backend/index.ts",
+      "candid": "backend/index.did",
+      "build": "npx azle azle_hello_world",
+      "wasm": ".azle/azle_hello_world/azle_hello_world.wasm",
+      "gzip": true
+    },
+    "angular": {
+      "frontend": {
+        "entrypoint": "dist/angular-2/index.html"
+      },
+      "source": ["dist/angular-2"],
+      "type": "assets"
+    }
+  }
+}
