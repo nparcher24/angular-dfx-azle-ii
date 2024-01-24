@@ -7,7 +7,7 @@ import { createActor as azleActor } from '../../declarations/azle_hello_world/in
   providedIn: 'root'
 })
 export class MotokoService {
-  private motokoActor = azleActor(environment.azle_hello_world, {
+  motokoActor = azleActor(environment.azle_hello_world, {
     agentOptions: {
       host: environment.host
     }

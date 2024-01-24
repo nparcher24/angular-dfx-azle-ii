@@ -9,4 +9,9 @@ actor {
   public query func test() : async Text {
     return "test from main.mo";
   };
+  
+    public shared (msg) func whoami() : async Principal {
+        msg.caller
+    };
+
 };

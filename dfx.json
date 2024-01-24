@@ -4,6 +4,10 @@
       "main": "backend/motoko/main.mo",
       "type": "motoko"
     },
+    "internet_identity": {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
     "azle_hello_world": {
       "type": "custom",
       "main": "backend/index.ts",

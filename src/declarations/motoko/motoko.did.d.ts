@@ -2,7 +2,7 @@ import type { Principal } from '@dfinity/principal';
 import type { ActorMethod } from '@dfinity/agent';
 
 export interface _SERVICE {
-  'getMessage' : ActorMethod<[], string>,
-  'setMessage' : ActorMethod<[string], undefined>,
-  'whoAmI' : ActorMethod<[], string>,
+  'greet' : ActorMethod<[string], string>,
+  'test' : ActorMethod<[], string>,
+  'whoami' : ActorMethod<[], Principal>,
 }

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MotokoService } from './services/motoko.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,9 @@ export class AppComponent {
   message = ""
   textInput = ""
   motokoService = inject(MotokoService)
+  authService = inject(AuthService)
   updating = false
+  myId = ""
 
   // constructor() {
   //   console.log("Calling test")
@@ -42,4 +45,17 @@ export class AppComponent {
 
   }
 
+  async login() {
+    this.updating = true
+    await this.authService.signIn()
+    await this.whoami()
+    this.updating = false
+  }
+
+  async whoami() {
+    this.authService.whoami().then((result) => {
+      this.myId = result?.toString() ?? ''
+    })
+
+  }
 }
